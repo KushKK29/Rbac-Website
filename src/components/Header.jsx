@@ -16,7 +16,7 @@ function Header() {
           to="/dashboard"
           className="text-3xl font-bold text-white hover:text-yellow-300 transition-colors"
         >
-          VRV
+          RBAC
         </NavLink>
 
         {/* Hamburger Button (for mobile) */}
@@ -46,39 +46,31 @@ function Header() {
 
         {/* Navbar Links for Desktop */}
         <div className="hidden lg:flex space-x-8">
-          {info.login && (
-            <NavLink
-              to="/dashboard"
-              className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Home
-            </NavLink>
-          )}
-          {info.login && (
-            <NavLink
-              to="/admin"
-              className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Admin Panel
-            </NavLink>
-          )}
-          {info.login && (
-            <NavLink
-              to="/users"
-              className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Users
-            </NavLink>
-          )}
-
-          {info.login && (
-            <NavLink
-              to="/requestpanel"
-              className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Request Panel
-            </NavLink>
-          )}
+          
+          <NavLink
+            to="/dashboard"
+            className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/admin"
+            className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Admin Panel
+          </NavLink>
+          <NavLink
+            to="/users"
+            className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Users
+          </NavLink>
+          <NavLink
+            to="/requestpanel"
+            className="text-lg text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Request Panel
+          </NavLink>
         </div>
 
         {/* Admin Login Button */}
@@ -106,38 +98,34 @@ function Header() {
       {/* Mobile Navbar (hidden on large screens) */}
       <div className={`lg:hidden mt-4 ${isMenuOpen ? "block" : "hidden"}`}>
         <div className="flex flex-col space-y-6 bg-teal-600 p-4 rounded-lg shadow-xl">
-          {info.login && (
-            <NavLink
-              to="/dashboard"
-              className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Home
-            </NavLink>
-          )}
-          {info.login && (
-            <NavLink
-              to="/admin"
-              className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Admin Panel
-            </NavLink>
-          )}
-          {info.login && (
-            <NavLink
-              to="/users"
-              className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Users
-            </NavLink>
-          )}
-          {info.login && (
-            <NavLink
-              to="/requestpanel"
-              className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
-            >
-              Request Panel
-            </NavLink>
-          )}
+          <NavLink
+            to="/dashboard"
+            className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/admin"
+            className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Admin Panel
+          </NavLink>
+
+          <NavLink
+            to="/users"
+            className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Users
+          </NavLink>
+
+          <NavLink
+            to="/requestpanel"
+            className="text-xl text-white hover:text-yellow-300 transition-all duration-300 ease-in-out"
+          >
+            Request Panel
+          </NavLink>
+
           {info.login === false ? (
             <NavLink
               to="/"
